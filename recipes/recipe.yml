@@ -3,7 +3,7 @@
 name: cocoa-os
 description: a testing image
 
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/base-main
 alt-tags:
   - latest
 image-version: 44
