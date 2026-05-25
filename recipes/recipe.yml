@@ -1,28 +1,88 @@
+---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
-
 name: cocoa-os
-# description will be included in the image's metadata
-description: This is my personal OS image.
+description: a testing image
 
-# the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/blue-build/base-images/fedora-base
+alt-tags:
+  - latest
 image-version: 44
 
 modules:
   - type: files
     files:
       - source: system
-        destination: /
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: systemd
+    system:
+      enabled:
+        - ublue-lightdm-workaround.service
+
   - type: dnf
     repos:
       copr:
         - garaevdi/pantheon-rpm
       nonfree: rpmfusion
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      cleanup: true
+    install:
+      packages:
+        - appcenter
+        - elementary-code
+        - elementary-calendar
+        - elementary-dock
+        - elementary-greeter
+        - elementary-mail
+        - elementary-monitor
+        - elementary-photos
+        - elementary-settings
+        - elementary-shortcut-overlay
+        - elementary-sideload
+        - elementary-terminal
+        - elementary-files
+        - elementary-files-portal
+        - expandtheon
+        - gala
+        - gcr
+        - PackageKit-bootc
+        - pantheon-agent-polkit
+        - pantheon-session-settings
+        - plymouth-theme-elementary
+        - switchboard
+        - wingpanel
+        - xdg-desktop-portal-pantheon
+        - gstreamer1-plugins-bad-freeworld
+        - gstreamer1-plugins-ugly
+        - gstreamer1-plugin-openh264
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - wingpanel-indicator-a11y # archived at upstream
+
   - type: default-flatpaks
     configurations:
       - notify: false
         scope: system
+        repo:
+          tilte: elementary
+          url: https://flatpak.elementary.io/repo.flatpakrepo
         install:
-          - org.mozilla.firefox
+          - io.elementary.camera/x86_64/stable
+          - io.elementary.capnet-assist/x86_64/stable
+          - io.elementary.contacts/x86_64/daily
+          - io.elementary.iconbrowser/x86_64/stable
+          - io.elementary.maps/x86_64/stable
+          - io.elementary.music/x86_64/stable
+          - io.elementary.screenshot/x86_64/stable
+          - io.elementary.tasks/x86_64/daily
+          - io.elementary.videos/x86_64/stable
+          - org.gnome.Epiphany/x86_64/stable
+          - org.gnome.Evince/x86_64/stable
+          - org.gnome.FileRoller/x86_64/stable
+          - org.gnome.font-viewer/x86_64/stable
+
+  - type: initramfs
   - type: signing
