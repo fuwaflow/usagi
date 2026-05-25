@@ -89,8 +89,8 @@ modules:
     properties:
       ID: cocoa-os
       ID_LIKE: fedora
-      NAME: Cocoa OS
-      PRETTY_NAME: "Cocoa OS"
+      NAME: Cocoa
+      PRETTY_NAME: "Cocoa"
       VERSION: "44"
       VERSION_CODENAME: cocoa
       HOME_URL: "https://github.com/fuwaflow/cocoa-os"
