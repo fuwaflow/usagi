@@ -17,11 +17,11 @@ modules:
       - source: system
         destination: /
 
-  - type: systemd
-    system:
-      enabled:
-      #- ublue-lightdm-workaround.service
-  
+  # - type: systemd
+  #   system:
+  #     enabled:
+  #     - ublue-lightdm-workaround.service
+
   - type: dnf
     repos:
       copr:
@@ -58,7 +58,7 @@ modules:
         - firefox
         - firefox-langpacks
         - wingpanel-indicator-a11y
-  
+
   - type: default-flatpaks
     configurations:
       - notify: false
@@ -85,5 +85,5 @@ modules:
         install:
           - org.mozilla.firefox
           - org.mozilla.Thunderbird
-    
+
   - type: signing
