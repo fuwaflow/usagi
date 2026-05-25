@@ -3,7 +3,7 @@
 name: cocoa-os
 description: a testing image
 
-base-image: ghcr.io/blue-build/base-images/fedora-base
+base-image: ghcr.io/ublue-os/bluefin
 alt-tags:
   - latest
 image-version: 44
