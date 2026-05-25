@@ -64,7 +64,7 @@ modules:
       - notify: false
         scope: system
         repo:
-          tilte: elementary
+          title: elementary
           url: https://flatpak.elementary.io/repo.flatpakrepo
         install:
           - io.elementary.camera/x86_64/stable
