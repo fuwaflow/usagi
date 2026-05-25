@@ -85,5 +85,15 @@ modules:
     auto-update: true
     auto-upgrade: true
 
+  - type: os-release
+    properties:
+      ID: cocoa-os
+      ID_LIKE: fedora
+      NAME: Cocoa OS
+      PRETTY_NAME: "Cocoa OS"
+      VERSION: "44"
+      VERSION_CODENAME: cocoa
+      HOME_URL: "https://github.com/fuwaflow/cocoa-os"
+
   - type: initramfs
   - type: signing
