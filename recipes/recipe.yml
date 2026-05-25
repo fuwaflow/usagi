@@ -13,8 +13,7 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-      - source: system/usr/lib/systemd/system/ublue-lightdm-workaround.service
-        destination: /usr/lib/systemd/system/ublue-lightdm-workaround.service
+
   - type: systemd
     system:
       enabled:
