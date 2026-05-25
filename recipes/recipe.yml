@@ -81,5 +81,9 @@ modules:
           - org.gnome.FileRoller/x86_64/stable
           - org.gnome.font-viewer/x86_64/stable
 
+  - type: brew
+    auto-update: true
+    auto-upgrade: true
+
   - type: initramfs
   - type: signing
