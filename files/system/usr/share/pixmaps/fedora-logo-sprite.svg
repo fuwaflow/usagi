@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 500 500"
+   fill="none"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="fedora-logo-sprite.svg"
+   inkscape:export-filename="../Documents/system-logo-white.png"
+   inkscape:export-xdpi="48.383999"
+   inkscape:export-ydpi="48.383999"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.9583333"
+     inkscape:cx="249.95745"
+     inkscape:cy="217.2766"
+     inkscape:window-width="2560"
+     inkscape:window-height="1366"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <path
+     d="m 0,400 c 0,55.2285 44.7715,100 100,100 h 150 c 138.071,0 250,-111.929 250,-250 v 0 C 500,111.929 388.071,0 250,0 V 0 C 111.929,0 0,111.929 0,250 Z"
+     fill="url(#paint0_linear_1016_105)"
+     id="path1"
+     style="fill:#715344;fill-opacity:1" />
+  <defs
+     id="defs8">
+    <linearGradient
+       id="paint0_linear_1016_105"
+       x1="50"
+       y1="50"
+       x2="550"
+       y2="550"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,-1,-50,550)">
+      <stop
+         offset="0.0684898"
+         stop-color="#0047AB"
+         id="stop7" />
+      <stop
+         offset="0.741212"
+         stop-color="#8A2BE2"
+         id="stop8" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 252.66666,378.16654 q -33.8333,0 -61.33327,-14.83332 -27.33331,-14.83332 -43.33329,-43.33329 -15.99999,-28.66663 -15.99999,-69.83327 0,-41.49996 15.99999,-70.1666 15.99998,-28.66664 43.33329,-43.33329 27.49997,-14.83331 61.33327,-14.83331 23.83331,0 43.83329,7 19.99998,6.99998 34.99997,19.83331 15.16665,12.83332 24.49998,30.8333 9.49999,17.99999 11.99999,39.99997 h -69.83327 q -1.5,-8.83333 -5.33333,-15.83333 -3.66666,-7 -9.33332,-11.83332 -5.66667,-4.83332 -13.16666,-7.33332 -7.33332,-2.66667 -16.33332,-2.66667 -16.83331,0 -28.49997,8 -11.49999,7.99999 -17.49998,23.33331 -6,15.16665 -6,36.99996 0,21.66665 5.83333,36.8333 6,15.16665 17.66665,23.16665 11.66666,7.99999 28.49997,7.99999 9,0 16.33332,-2.5 7.33333,-2.5 12.99999,-7.33333 5.66666,-4.99999 9.33332,-11.83332 3.83333,-6.99999 5.5,-15.66665 h 69.83327 q -2.66667,21.99998 -11.99999,39.99996 -9.33333,17.83332 -24.49998,30.66663 -15.16665,12.83333 -35.16663,19.83331 -19.83332,6.83333 -43.66663,6.83333 z"
+     id="text3"
+     style="font-size:341.333px;font-family:'Inter Variable';-inkscape-font-specification:'Inter Variable, @opsz=32,wght=900';font-variation-settings:'opsz' 32, 'wght' 900;fill:#ffffff"
+     aria-label="C" />
+</svg>
