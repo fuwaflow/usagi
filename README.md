@@ -8,7 +8,7 @@ thanks to https://github.com/garaevdi/prosto/
 
 ## current bugs
 - screen recording portal non functional
-
+- some icons (symbolics?) are missing and idk why
 
 ## Installation
 
