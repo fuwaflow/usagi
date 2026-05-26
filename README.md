@@ -9,6 +9,7 @@ thanks to https://github.com/garaevdi/prosto/
 ## current bugs
 - screen recording portal non functional
 - some icons (symbolics?) are missing and idk why
+- trying to switch desktops with super left right switches ttys
 
 ## Installation
 
