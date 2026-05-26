@@ -6,6 +6,10 @@ After setup, it is recommended you update this README to describe your custom im
 
 thanks to https://github.com/garaevdi/prosto/
 
+## current bugs
+- screen recording portal non functional
+
+
 ## Installation
 
 > [!WARNING]  
