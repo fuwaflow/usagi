@@ -86,16 +86,20 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: elementary
+          title: appcenter
           url: https://flatpak.elementary.io/repo.flatpakrepo
 
         install:
+          - io.elementary.calculator
+          - io.elementary.calendar
           - io.elementary.camera
           - io.elementary.capnet-assist
           - io.elementary.contacts
           - io.elementary.iconbrowser
           - io.elementary.maps
+          - io.elementary.mail
           - io.elementary.music
+          - io.elementary.photos
           - io.elementary.screenshot
           - io.elementary.tasks
           - io.elementary.videos
