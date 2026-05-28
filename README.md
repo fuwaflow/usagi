@@ -10,6 +10,7 @@ thanks to https://github.com/garaevdi/prosto/
 - screen recording portal non functional
 - some icons (symbolics?) are missing and idk why
 - trying to switch desktops with super left right switches ttys but only sometimes idk what causes it
+- wingpanel and the dock take a few seconds to show up
 
 ## Installation
 
