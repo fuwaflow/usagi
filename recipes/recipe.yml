@@ -1,11 +1,14 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
 name: usagi
-description: a testing image
+description: Pantheon Fedora Atomic image with batteries included. (not ready)
 
 base-image: ghcr.io/ublue-os/base-main
+
 alt-tags:
   - latest
+
 image-version: 44
 
 modules:
@@ -13,6 +16,7 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
   - type: script
     scripts:
       - example.sh
@@ -30,8 +34,10 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       cleanup: true
+
     install:
       packages:
+        # desktop stuff
         - appcenter
         - elementary-code
         - elementary-calendar
@@ -56,6 +62,19 @@ modules:
         - switchboard
         - wingpanel
         - xdg-desktop-portal-pantheon
+
+        # terminal stuff
+        - fish
+        - starship
+        - eza
+        - bat
+        - btop
+        - fastfetch
+        - zoxide
+        - fzf
+        - ripgrep
+        - fd-find
+
     remove:
       packages:
         - firefox
@@ -69,20 +88,21 @@ modules:
         repo:
           title: elementary
           url: https://flatpak.elementary.io/repo.flatpakrepo
+
         install:
-          - io.elementary.camera/x86_64/stable
-          - io.elementary.capnet-assist/x86_64/stable
-          - io.elementary.contacts/x86_64/daily
-          - io.elementary.iconbrowser/x86_64/stable
-          - io.elementary.maps/x86_64/stable
-          - io.elementary.music/x86_64/stable
-          - io.elementary.screenshot/x86_64/stable
-          - io.elementary.tasks/x86_64/daily
-          - io.elementary.videos/x86_64/stable
-          - org.gnome.Epiphany/x86_64/stable
-          - org.gnome.Evince/x86_64/stable
-          - org.gnome.FileRoller/x86_64/stable
-          - org.gnome.font-viewer/x86_64/stable
+          - io.elementary.camera
+          - io.elementary.capnet-assist
+          - io.elementary.contacts
+          - io.elementary.iconbrowser
+          - io.elementary.maps
+          - io.elementary.music
+          - io.elementary.screenshot
+          - io.elementary.tasks
+          - io.elementary.videos
+          - org.gnome.Epiphany
+          - org.gnome.Evince
+          - org.gnome.FileRoller
+          - org.gnome.font-viewer
 
   - type: brew
     auto-update: true
@@ -99,4 +119,5 @@ modules:
       HOME_URL: "https://github.com/fuwaflow/usagi"
 
   - type: initramfs
+
   - type: signing
