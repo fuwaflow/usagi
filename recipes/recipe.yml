@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: cocoa-os
+name: usagi
 description: a testing image
 
 base-image: ghcr.io/ublue-os/base-main
@@ -90,13 +90,13 @@ modules:
 
   - type: os-release
     properties:
-      ID: cocoa-os
+      ID: usagi
       ID_LIKE: fedora
-      NAME: Cocoa
-      PRETTY_NAME: "Cocoa"
+      NAME: Usagi
+      PRETTY_NAME: "Usagi"
       VERSION: "44"
-      VERSION_CODENAME: cocoa
-      HOME_URL: "https://github.com/fuwaflow/cocoa-os"
+      VERSION_CODENAME: usagi
+      HOME_URL: "https://github.com/fuwaflow/usagi"
 
   - type: initramfs
   - type: signing
