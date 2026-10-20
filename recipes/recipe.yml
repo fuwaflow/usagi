@@ -102,10 +102,17 @@ modules:
           - io.elementary.tasks/x86_64/stable
           - io.elementary.videos/x86_64/stable
 
-          - org.gnome.Epiphany/x86_64/stable
           - org.gnome.Evince/x86_64/stable
           - org.gnome.FileRoller/x86_64/stable
           - org.gnome.font-viewer/x86_64/stable
+
+      # Flathub defaults
+      - notify: false
+        scope: system
+        install:
+          - org.mozilla.firefox
+          - com.github.tchx84.Flatseal
+          - io.github.flattool.Warehouse
 
   - type: brew
     auto-update: true
