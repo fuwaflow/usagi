@@ -1,0 +1,91 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: script
+    scripts:
+      - example.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - ublue-lightdm-workaround.service
+
+  - type: dnf
+    repos:
+      copr:
+        - garaevdi/pantheon-rpm
+        - ublue-os/packages
+      nonfree: rpmfusion
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      cleanup: true
+
+    install:
+      packages:
+        # desktop stuff
+        - appcenter
+        - elementary-code
+        - elementary-dock
+        - elementary-greeter
+        - elementary-initial-setup
+        - elementary-monitor
+        - elementary-settings
+        - elementary-shortcut-overlay
+        - elementary-sideload
+        - elementary-terminal
+        - elementary-files
+        - elementary-files-portal
+        - elementary-onboarding
+        - gala
+        - gcr
+        - PackageKit-bootc
+        - pantheon-agent-polkit
+        - pantheon-session-settings
+        - plymouth-theme-elementary
+        - switchboard
+        - wingpanel
+        - xdg-desktop-portal-pantheon
+
+        # terminal stuff & ujust
+        - fish
+        - starship
+        - eza
+        - bat
+        - btop
+        - fastfetch
+        - zoxide
+        - fzf
+        - ripgrep
+        - fd-find
+        - just
+        - ublue-os-just
+        - uupd
+
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
+
+  - type: brew
+    auto-update: true
+    auto-upgrade: true
+
+  - type: os-release
+    properties:
+      ID: usagi
+      ID_LIKE: fedora
+      NAME: Usagi
+      PRETTY_NAME: "Usagi"
+      VERSION: "44"
+      VERSION_CODENAME: usagi
+      HOME_URL: "https://github.com/fuwaflow/usagi"
+
+  - type: initramfs
+
+  - type: signing
