@@ -44,11 +44,13 @@ modules:
         - elementary-onboarding
         - gala
         - gcr
+        - gnome-keyring-pam
         - PackageKit-bootc
         - pantheon-agent-polkit
         - pantheon-session-settings
         - plymouth-theme-elementary
         - switchboard
+        - switchboard-plug-sharing
         - wingpanel
         - xdg-desktop-portal-pantheon
 
