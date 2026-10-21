@@ -4,7 +4,8 @@
 name: usagi
 description: Pantheon Fedora Atomic image with batteries included.
 
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/base-main
+
 alt-tags:
   - latest
 image-version: 44
