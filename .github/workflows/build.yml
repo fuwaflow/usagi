@@ -17,7 +17,7 @@ concurrency:
 jobs:
   bluebuild:
     name: Build Custom Image
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runner }}
     permissions:
       contents: read
       packages: write
@@ -25,9 +25,11 @@ jobs:
     strategy:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
-        recipe:
-          # !! Add your recipes here
-          - recipe.yml
+        include:
+          - recipe: recipe.yml
+            runner: ubuntu-latest
+          - recipe: recipe-asahi.yml
+            runner: ubuntu-24.04-arm
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
