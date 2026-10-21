@@ -2,84 +2,18 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 name: usagi-asahi
-description: Pantheon Fedora Atomic image with batteries included. (Asahi testing)
+description: Pantheon Fedora Atomic image with batteries included. (Asahi)
 
 base-image: quay.io/fedora-asahi-remix-atomic-desktops/base-atomic
-
 alt-tags:
   - latest
-
 image-version: 44
 
 platforms:
   - linux/arm64
 
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: script
-    scripts:
-      - example.sh
-
-  - type: systemd
-    system:
-      enabled:
-        - ublue-lightdm-workaround.service
-
-  - type: dnf
-    repos:
-      copr:
-        - garaevdi/pantheon-rpm
-      nonfree: rpmfusion
-      files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-      cleanup: true
-
-    install:
-      packages:
-        # desktop stuff
-        - appcenter
-        - elementary-code
-        - elementary-dock
-        - elementary-greeter
-        - elementary-initial-setup
-        - elementary-monitor
-        - elementary-settings
-        - elementary-shortcut-overlay
-        - elementary-sideload
-        - elementary-terminal
-        - elementary-files
-        - elementary-files-portal
-        - elementary-onboarding
-        - gala
-        - gcr
-        - PackageKit-bootc
-        - pantheon-agent-polkit
-        - pantheon-session-settings
-        - plymouth-theme-elementary
-        - switchboard
-        - wingpanel
-        - xdg-desktop-portal-pantheon
-
-        # terminal stuff
-        - fish
-        - starship
-        - eza
-        - bat
-        - btop
-        - fastfetch
-        - zoxide
-        - fzf
-        - ripgrep
-        - fd-find
-
-    remove:
-      packages:
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - from-file: common.yml
 
   - type: default-flatpaks
     configurations:
@@ -89,7 +23,6 @@ modules:
           name: appcenter
           title: appcenter
           url: https://flatpak.elementary.io/repo.flatpakrepo
-
         install:
           - io.elementary.calculator/aarch64/stable
           - io.elementary.calendar/aarch64/stable
@@ -104,33 +37,13 @@ modules:
           - io.elementary.screenshot/aarch64/stable
           - io.elementary.tasks/aarch64/stable
           - io.elementary.videos/aarch64/stable
-
           - org.gnome.Evince/aarch64/stable
           - org.gnome.FileRoller/aarch64/stable
           - org.gnome.font-viewer/aarch64/stable
 
-      # Flathub defaults
       - notify: false
         scope: system
         install:
           - org.mozilla.firefox
           - com.github.tchx84.Flatseal
           - io.github.flattool.Warehouse
-
-  - type: brew
-    auto-update: true
-    auto-upgrade: true
-
-  - type: os-release
-    properties:
-      ID: usagi
-      ID_LIKE: fedora
-      NAME: Usagi
-      PRETTY_NAME: "Usagi"
-      VERSION: "44"
-      VERSION_CODENAME: usagi
-      HOME_URL: "https://github.com/fuwaflow/usagi"
-
-  - type: initramfs
-
-  - type: signing
