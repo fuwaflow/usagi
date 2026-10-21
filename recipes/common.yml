@@ -72,8 +72,6 @@ modules:
         - firefox
         - firefox-langpacks
 
-  - type: justfiles
-
   - type: brew
     auto-update: true
     auto-upgrade: true
