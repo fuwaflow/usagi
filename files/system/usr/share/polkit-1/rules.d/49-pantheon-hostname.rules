@@ -1,0 +1,9 @@
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.hostname1.set-static-hostname" ||
+         action.id == "org.freedesktop.hostname1.set-hostname" ||
+         action.id == "org.freedesktop.hostname1.set-machine-info") &&
+        subject.active == true && subject.local == true &&
+        subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
