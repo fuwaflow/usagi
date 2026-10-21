@@ -1,4 +1,3 @@
-
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
@@ -11,6 +10,9 @@ alt-tags:
   - latest
 
 image-version: 44
+
+platforms:
+  - linux/arm64
 
 modules:
   - type: files
@@ -74,11 +76,6 @@ modules:
         - ripgrep
         - fd-find
 
-    remove:
-      packages:
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
   - type: default-flatpaks
     configurations:
       - notify: false
@@ -89,23 +86,23 @@ modules:
           url: https://flatpak.elementary.io/repo.flatpakrepo
 
         install:
-          - io.elementary.calculator/x86_64/stable
-          - io.elementary.calendar/x86_64/stable
-          - io.elementary.camera/x86_64/stable
-          - io.elementary.capnet-assist/x86_64/stable
-          - io.elementary.contacts/x86_64/daily
-          - io.elementary.iconbrowser/x86_64/stable
-          - io.elementary.maps/x86_64/stable
-          - io.elementary.mail/x86_64/daily
-          - io.elementary.music/x86_64/stable
-          - io.elementary.photos/x86_64/stable
-          - io.elementary.screenshot/x86_64/stable
-          - io.elementary.tasks/x86_64/stable
-          - io.elementary.videos/x86_64/stable
+          - io.elementary.calculator
+          - io.elementary.calendar
+          - io.elementary.camera
+          - io.elementary.capnet-assist
+          - io.elementary.contacts///daily
+          - io.elementary.iconbrowser
+          - io.elementary.maps
+          - io.elementary.mail///daily
+          - io.elementary.music
+          - io.elementary.photos
+          - io.elementary.screenshot
+          - io.elementary.tasks
+          - io.elementary.videos
 
-          - org.gnome.Evince/x86_64/stable
-          - org.gnome.FileRoller/x86_64/stable
-          - org.gnome.font-viewer/x86_64/stable
+          - org.gnome.Evince
+          - org.gnome.FileRoller
+          - org.gnome.font-viewer
 
       # Flathub defaults
       - notify: false
