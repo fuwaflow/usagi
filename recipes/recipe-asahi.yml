@@ -91,23 +91,23 @@ modules:
           url: https://flatpak.elementary.io/repo.flatpakrepo
 
         install:
-          - io.elementary.calculator
-          - io.elementary.calendar
-          - io.elementary.camera
-          - io.elementary.capnet-assist
-          - io.elementary.contacts///daily
-          - io.elementary.iconbrowser
-          - io.elementary.maps
-          - io.elementary.mail///daily
-          - io.elementary.music
-          - io.elementary.photos
-          - io.elementary.screenshot
-          - io.elementary.tasks
-          - io.elementary.videos
+          - io.elementary.calculator/aarch64/stable
+          - io.elementary.calendar/aarch64/stable
+          - io.elementary.camera/aarch64/stable
+          - io.elementary.capnet-assist/aarch64/stable
+          - io.elementary.contacts/aarch64/daily
+          - io.elementary.iconbrowser/aarch64/stable
+          - io.elementary.maps/aarch64/stable
+          - io.elementary.mail/aarch64/daily
+          - io.elementary.music/aarch64/stable
+          - io.elementary.photos/aarch64/stable
+          - io.elementary.screenshot/aarch64/stable
+          - io.elementary.tasks/aarch64/stable
+          - io.elementary.videos/aarch64/stable
 
-          - org.gnome.Evince
-          - org.gnome.FileRoller
-          - org.gnome.font-viewer
+          - org.gnome.Evince/aarch64/stable
+          - org.gnome.FileRoller/aarch64/stable
+          - org.gnome.font-viewer/aarch64/stable
 
       # Flathub defaults
       - notify: false
