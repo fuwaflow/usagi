@@ -89,7 +89,12 @@ modules:
       PRETTY_NAME: "Usagi"
       VERSION: "44"
       VERSION_CODENAME: usagi
+      DEFAULT_HOSTNAME: usagi
       HOME_URL: "https://github.com/fuwaflow/usagi"
+      DOCUMENTATION_URL: "https://github.com/fuwaflow/usagi#readme"
+      SUPPORT_URL: "https://github.com/fuwaflow/usagi/issues"
+      BUG_REPORT_URL: "https://github.com/fuwaflow/usagi/issues"
+      LOGO: usagi-logo
 
   - type: initramfs
 
