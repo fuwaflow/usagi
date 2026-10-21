@@ -76,6 +76,11 @@ modules:
         - ripgrep
         - fd-find
 
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
   - type: default-flatpaks
     configurations:
       - notify: false
