@@ -7,18 +7,6 @@ modules:
       - source: system
         destination: /
 
-  - type: script
-    scripts:
-      - example.sh
-
-  - type: systemd
-    system:
-      enabled:
-        - ublue-lightdm-workaround.service
-    user:
-      enabled:
-        - io.elementary.desktop.agent-polkit.service
-
   - type: dnf
     repos:
       copr:
@@ -76,6 +64,18 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+
+  - type: systemd
+    system:
+      enabled:
+        - ublue-lightdm-workaround.service
+    user:
+      enabled:
+        - io.elementary.desktop.agent-polkit.service
+
+  - type: script
+    scripts:
+      - example.sh
 
   - type: brew
     auto-update: true
