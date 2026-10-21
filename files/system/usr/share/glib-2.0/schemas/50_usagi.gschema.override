@@ -1,0 +1,2 @@
+[io.elementary.dock]
+launchers=['io.elementary.files.desktop', 'org.mozilla.firefox.desktop', 'io.elementary.mail.desktop', 'io.elementary.calendar.desktop', 'io.elementary.music.desktop', 'io.elementary.photos.desktop', 'io.elementary.appcenter.desktop', 'io.elementary.settings.desktop']
