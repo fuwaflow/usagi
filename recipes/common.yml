@@ -15,6 +15,9 @@ modules:
     system:
       enabled:
         - ublue-lightdm-workaround.service
+    user:
+      enabled:
+        - io.elementary.desktop.agent-polkit.service
 
   - type: dnf
     repos:
