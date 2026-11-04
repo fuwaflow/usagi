@@ -87,7 +87,7 @@ modules:
       ID_LIKE: fedora
       NAME: Usagi
       PRETTY_NAME: "Usagi"
-      VERSION: "44"
+      VERSION: "45"
       VERSION_CODENAME: usagi
       DEFAULT_HOSTNAME: usagi
       HOME_URL: "https://github.com/fuwaflow/usagi"
