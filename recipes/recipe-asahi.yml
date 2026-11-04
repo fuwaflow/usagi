@@ -7,7 +7,7 @@ description: Pantheon Fedora Atomic image with batteries included. (Asahi)
 base-image: quay.io/fedora-asahi-remix-atomic-desktops/base-atomic
 alt-tags:
   - latest
-image-version: 44
+image-version: 45
 
 platforms:
   - linux/arm64
